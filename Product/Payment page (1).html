@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payment Form Design</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script>
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+</script>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    /*display: flex;*/
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(127, 127, 184);
+  }
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
+    margin-bottom: 30px;
+   
+  }
+  
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 20px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: #333;
+    color: white;
+  }
+  
+  .topnav .icon {
+    display: none;
+  }
+
+  @media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }}
+
+  .container {
+    width: 350px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-left: 570px;
+    margin-bottom: 30px;
+  }
+
+  .header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .header h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  .name-group {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .name-group input {
+    width: 60%; 
+  }
+
+  .expiration-cvv-group {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .expiration-cvv-group input {
+    width: 48%;
+  }
+
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  .order-summary {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 15px;
+  }
+
+  .order-summary h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .order-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+
+  .order-item span:last-child {
+    text-align: right;
+  }
+
+  .order-total {
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: right;
+  }
+
+  .payment-method-group {
+    margin-bottom: 20px;
+  }
+
+  .footer {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  height: 100px;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+.whatsapp{
+  color: white;
+}
+i:hover {
+  color: yellow;
+}
+</style>
+</head>
+<body>
+
+  <div class="topnav" id="myTopnav">
+    <a href="#home" class="active"><img src="juicebaricon__1_-removebg-preview.png"></a>
+    <a href="#home" style="padding-top: 40px;">Home</a>
+    <a href="#aboutus" style="padding-top: 40px;">About us</a>
+    <a href="#placeorder" style="padding-top: 40px;">Place order</a>
+    <a href="#contactus" style="padding-top: 40px;">Contact us</a>
+    <a href="#login" style="padding-top: 40px;">Log in</a>
+    <a href="#manage" style="padding-top: 40px;">Manage</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+
+  <div class="container">
+    <div class="order-summary">
+      <h3>Your Order</h3>
+      <div class="order-item">
+        <span>Orange Juice</span>
+        <span>Rs.500</span>
+      </div>
+      <div class="order-item">
+        <span>Watermelon</span>
+        <span>Rs.1000</span>
+      </div>
+      <div class="order-total">
+        <span>Total: Rs.1500</span>
+      </div>
+    </div>
+
+    <div class="header">
+      <h2>Payment</h2>
+    </div>
+
+    <form action="#" method="post" id="paymentForm">
+      <div class="payment-method-group">
+        <div class="form-group">
+          <label for="paymentMethod">Payment Method</label>
+          <select id="paymentMethod" required>
+            <option value="">Select Payment Method</option>
+            <option value="creditCard">Credit Card</option>
+            <option value="debitCard">Debit Card</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="name-group">
+        <div class="form-group">
+          <label for="firstName">First Name</label>
+          <input type="text" id="firstName" placeholder="Enter first name" required>
+        </div>
+        <div class="form-group">
+          <label for="lastName">Last Name</label>
+          <input type="text" id="lastName" placeholder="Enter last name" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="cardNumber">Card Number</label>
+        <input type="text" id="cardNumber" placeholder="Enter card number" required>
+      </div>
+
+      <div class="expiration-cvv-group">
+        <div class="form-group">
+          <label for="expiryDate">Expiry Date</label>
+          <input type="text" id="expiryDate" placeholder="MM/YY" required>
+        </div>
+        <div class="form-group">
+          <label for="cvv">CVV</label>
+          <input type="text" id="cvv" placeholder="CVV" required>
+        </div>
+      </div>
+
+      <button type="submit">PURCHASE</button>
+    </form>
+  </div>
+
+  <div class="footer">
+        
+    <i class="fa fa-whatsapp" style="font-size:30px;color:rgb(224, 104, 5); padding-top: 20px;padding-right: 20px;"></i>  
+    <i class="fa fa-facebook" style="font-size:30px;color:rgb(224, 104, 5); padding-top: 20px;padding-right: 20px;"></i>  
+    <i class="fa fa-instagram" style="font-size:30px;color:rgb(224, 104, 5); padding-top: 20px; padding-right: 20px;"></i> 
+    <i class="fa fa-twitter" style="font-size:30px;color:rgb(224, 104, 5); padding-top: 20px;"></i>   
+
+</div>
+
+</body>
+</html>
